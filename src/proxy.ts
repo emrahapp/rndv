@@ -6,5 +6,8 @@ import { routing } from "./i18n/routing";
 export default createMiddleware(routing);
 
 export const config = {
-  matcher: ["/((?!api|_next|_vercel|.*\\..*).*)"],
+  // Skip API routes, internal Next paths, generated favicons, and any path
+  // with a dot (static files). Without the icon/apple-icon exclusions,
+  // next-intl tries to rewrite them to a locale-prefixed path and 404s.
+  matcher: ["/((?!api|_next|_vercel|icon|apple-icon|favicon\\.ico|.*\\..*).*)"],
 };
