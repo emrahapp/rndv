@@ -1,0 +1,522 @@
+{
+  "common": {
+    "appName": "rndv",
+    "tagline": "Randevu defterin, cebinde.",
+    "back": "Geri",
+    "save": "Kaydet",
+    "saving": "Kaydediliyor…",
+    "saved": "Kaydedildi.",
+    "cancel": "Vazgeç",
+    "yes": "Evet",
+    "no": "Hayır"
+  },
+  "nav": {
+    "forBusinesses": "İşletmeler için",
+    "login": "Giriş",
+    "signup": "Üye ol"
+  },
+  "landing": {
+    "badge": "Yeni · rndv.click",
+    "title": "Randevu defterin cebinde",
+    "description": "Müşterilerine tek link gönder. Saniyeler içinde randevu alsınlar — kayıt yok, SMS ile doğrulansın, randevu hazır.",
+    "ctaPrimary": "Ücretsiz başla",
+    "ctaSecondary": "Örnek profili gör",
+    "nav": {
+      "pricing": "Fiyat",
+      "features": "Özellikler"
+    },
+    "card": {
+      "business": "Ayşe Kuaför",
+      "service": "30 dk randevu",
+      "time": "Yarın · 14:30",
+      "cta": "rndv ile al"
+    },
+    "features": {
+      "kicker": "Neler var",
+      "title": "İhtiyacın olan her şey, ekstra hiçbir şey",
+      "subtitle": "Randevu sistemi olması gereken kadar — sade, hızlı, müşterini sıkmayan.",
+      "items": {
+        "sms": {
+          "title": "SMS otomasyonu",
+          "description": "Randevu sonrası onay, 24 saat önce hatırlatma. Sen uğraşma, sistem halletsin."
+        },
+        "qr": {
+          "title": "QR & Paylaşım kartı",
+          "description": "Vitrin için QR, Instagram story için 1080×1920 kart — tek tıkla indir."
+        },
+        "reports": {
+          "title": "Raporlar",
+          "subtitle": "Günlük ziyaret, dönüşüm oranı, popüler saatler — performansını ölç.",
+          "description": "Günlük ziyaret, dönüşüm oranı, popüler saatler — performansını ölç."
+        },
+        "i18n": {
+          "title": "Türkçe ve İngilizce",
+          "description": "Yerli müşteri, turist veya yabancı çalışan — herkes kendi dilinde randevu alsın."
+        }
+      }
+    },
+    "how": {
+      "kicker": "Nasıl çalışır",
+      "title": "3 adımda randevu defterin hazır",
+      "step1": {
+        "title": "Hesabını oluştur",
+        "description": "Ad, telefon, e-posta. SMS doğrulamayla 30 saniyede içerideyiz."
+      },
+      "step2": {
+        "title": "Çalışma saatlerini ayarla",
+        "description": "Hangi gün ve saatlerde müsait olduğunu seç, slot süreni belirle."
+      },
+      "step3": {
+        "title": "Linkini paylaş",
+        "description": "Instagram, WhatsApp, kartvizit — müşterilerin tek tıkla randevu alsın."
+      }
+    },
+    "sectors": {
+      "kicker": "Herkes için",
+      "title": "Hangi sektörde olursan ol",
+      "subtitle": "Randevu ile çalışan her işletme rndv'yi kullanabilir.",
+      "items": {
+        "barber": "Kuaför / Berber",
+        "beauty": "Güzellik salonu",
+        "doctor": "Doktor / Klinik",
+        "vet": "Veteriner",
+        "trainer": "Spor / PT",
+        "spa": "SPA / Masaj"
+      }
+    },
+    "pricing": {
+      "kicker": "Fiyat",
+      "title": "Önce dene, sonra büyüt",
+      "subtitle": "Free planda her şeyi test et. Hazır olunca Pro'ya geç.",
+      "month": "ay",
+      "disclaimer": "Pro planda otomatik yenileme yok — istediğin zaman durdurabilirsin.",
+      "free": {
+        "name": "Free",
+        "tagline": "Küçük başla, ücretsiz.",
+        "perk1": "Ayda 30 randevu",
+        "perk2": "Public booking link + QR kart",
+        "perk3": "Müşteri OTP doğrulaması",
+        "cta": "Ücretsiz başla"
+      },
+      "pro": {
+        "name": "Pro",
+        "tagline": "Profesyonel kullanım için.",
+        "perk1": "Sınırsız randevu",
+        "perk2": "Aylık 500 SMS dahil (onay + hatırlatma)",
+        "perk3": "WhatsApp bildirimleri",
+        "perk4": "Raporlar ve analiz",
+        "perk5": "Ek SMS paketi satın al",
+        "cta": "Pro'yu seç"
+      }
+    },
+    "testimonials": {
+      "kicker": "Müşterilerimiz",
+      "title": "Profesyonellerin tercihi",
+      "items": {
+        "ayse": {
+          "quote": "Eskiden günlük 20 telefon trafiği vardı, şimdi müşteriler kendi randevularını alıyor. Hatırlatma SMS'leri sayesinde gelmezler azaldı.",
+          "name": "Ayşe Kaya",
+          "role": "Kuaför, Beyoğlu"
+        },
+        "mehmet": {
+          "quote": "Diş hekimliği randevu yönetimi için pahalı yazılımlar denedim. rndv hem daha sade hem fiyatı uygun. Hastalarım QR ile randevu alıyor.",
+          "name": "Dr. Mehmet Yılmaz",
+          "role": "Diş Hekimi, Ankara"
+        },
+        "selin": {
+          "quote": "Instagram bio'mda rndv linkim var. Story'ye QR kartı koyduğum gün 12 randevu aldım. Daha önce bu kadar müşteri çekememiştim.",
+          "name": "Selin Aksoy",
+          "role": "SPA & Masaj Sahibi"
+        }
+      }
+    },
+    "faq": {
+      "kicker": "Sıkça sorulanlar",
+      "title": "Aklındaki sorular",
+      "items": {
+        "q1": {
+          "q": "Kurulum ne kadar sürer?",
+          "a": "Ortalama 2 dakika. Kayıt ol, SMS ile doğrula, çalışma saatlerini seç, linkini paylaş. Müşterilerin hemen randevu almaya başlayabilir."
+        },
+        "q2": {
+          "q": "SMS ücretleri kime ait?",
+          "a": "Free planda SMS gönderilmez (in-app onay). Pro planda aylık 500 SMS dahildir. 500'ün üstüne çıkarsan ek SMS paketi (₺50 / 250 SMS) satın alabilirsin."
+        },
+        "q3": {
+          "q": "Müşterilerim üye olmak zorunda mı?",
+          "a": "Hayır. Müşteri linkine tıklar, slot seçer, adını + telefonunu girer, gelen 6 haneli SMS kodunu doğrular. Hesap açmaya gerek yok."
+        },
+        "q4": {
+          "q": "Randevuyu kim iptal edebilir?",
+          "a": "Hem müşteri (SMS'teki iptal linki) hem firma (panel'den). Karşı taraf otomatik bilgilendirilir."
+        },
+        "q5": {
+          "q": "Verilerim kimin yanında?",
+          "a": "Tüm veriler Supabase (KVKK uyumlu, AB sunucularında) üzerinde tutulur. Sadece sen erişebilirsin — row-level security ile başkasının görmesi mümkün değil."
+        },
+        "q6": {
+          "q": "Çalışma saatlerimi sonradan değiştirebilir miyim?",
+          "a": "Evet, ayarlardan istediğin zaman değiştir. Yeni booking'ler hemen yeni saatlere göre açılır, mevcut randevular etkilenmez."
+        }
+      }
+    },
+    "finalCta": {
+      "kicker": "Hadi başla",
+      "title": "Randevu defterin 2 dakikada hazır",
+      "subtitle": "Ücretsiz başla, kart isteme. Hoşuna giderse Pro'ya geç.",
+      "primary": "Ücretsiz hesap aç",
+      "secondary": "Fiyatları gör"
+    },
+    "footer": {
+      "tagline": "Hızlı, sade, randevu odaklı.",
+      "rights": "Tüm hakları saklıdır.",
+      "product": "Ürün",
+      "features": "Özellikler",
+      "pricing": "Fiyat",
+      "account": "Hesap",
+      "legal": "Yasal",
+      "terms": "Kullanım koşulları",
+      "privacy": "Gizlilik politikası"
+    }
+  },
+  "auth": {
+    "signup": {
+      "title": "Hesabını oluştur",
+      "subtitle": "30 saniyede randevu defterin hazır.",
+      "ad_soyad": "Ad Soyad veya Firma Adı",
+      "ad_soyadPlaceholder": "Ayşe Kuaför",
+      "telefon": "Telefon",
+      "telefonPlaceholder": "5XX XXX XX XX",
+      "telefonHint": "SMS doğrulaması için.",
+      "email": "E-posta",
+      "emailPlaceholder": "sen@ornek.com",
+      "parola": "Parola",
+      "parolaHint": "En az 6 karakter.",
+      "submit": "Devam et",
+      "submitting": "Gönderiliyor…",
+      "haveAccount": "Hesabın var mı?",
+      "loginLink": "Giriş yap"
+    },
+    "login": {
+      "title": "Tekrar hoş geldin",
+      "subtitle": "Randevu defterini açalım.",
+      "email": "E-posta",
+      "parola": "Parola",
+      "submit": "Giriş yap",
+      "submitting": "Giriş yapılıyor…",
+      "noAccount": "Hesabın yok mu?",
+      "signupLink": "Üye ol"
+    },
+    "otp": {
+      "title": "Telefonunu doğrula",
+      "subtitle": "{phone} numarasına 6 haneli kod gönderdik.",
+      "submit": "Doğrula",
+      "submitting": "Doğrulanıyor…",
+      "resend": "Kodu tekrar gönder",
+      "resendIn": "{seconds} sn sonra tekrar gönder",
+      "resending": "Gönderiliyor…",
+      "wrongNumber": "Numaranı değiştirmek mi istiyorsun?",
+      "restart": "Baştan başla"
+    }
+  },
+  "app": {
+    "dashboard": {
+      "title": "Hoş geldin, {name}",
+      "subtitle": "Randevu defterin hazır.",
+      "publicLink": {
+        "title": "Senin randevu linkin",
+        "subtitle": "Müşterilerine bu linki gönder, saniyeler içinde randevu alsınlar.",
+        "copy": "Kopyala",
+        "copied": "Kopyalandı",
+        "open": "Aç"
+      },
+      "stats": {
+        "today": "Bugün",
+        "week": "Bu hafta",
+        "customers": "Müşteri"
+      },
+      "todayList": "Bugünün randevuları",
+      "today": "Bugün için randevu yok.",
+      "emptyHint": "Müşterilerin linke tıkladığında randevular burada gözükür."
+    },
+    "plan": {
+      "free": "Free",
+      "pro": "Pro",
+      "bookingsUsed": "{used}/{limit} randevu bu ay",
+      "smsUsed": "{used}/{included} SMS bu ay",
+      "smsBundleUsage": "{credits} kredi kaldı (ek paket)",
+      "proUntil": "Pro · {date}'a kadar aktif",
+      "freeFullHint": "Bu ayki ücretsiz randevu hakkın doldu.",
+      "upgradeCta": "Pro'ya geç",
+      "manageCta": "Aboneliği yönet"
+    },
+    "settings": {
+      "title": "Ayarlar",
+      "subtitle": "Profilini ve çalışma saatlerini buradan yönet.",
+      "subscription": {
+        "title": "Abonelik",
+        "subtitle": "Mevcut plan ve fatura.",
+        "activeUntil": "{date} tarihine kadar aktif",
+        "bookingsThisMonth": "Bu ayki randevu",
+        "smsThisMonth": "Bu ay gönderilen SMS",
+        "bundleCredits": "Bonus kredi: {count} SMS",
+        "upgradeCta": "Pro'ya geç · ₺499/ay",
+        "downgradeCta": "Free'ye dön",
+        "perks": {
+          "unlimitedBookings": "Sınırsız randevu",
+          "smsIncluded": "Aylık 500 SMS dahil",
+          "whatsapp": "WhatsApp bildirimleri",
+          "reports": "Raporlar ve analiz"
+        },
+        "bundles": {
+          "title": "SMS Bundle",
+          "subtitle": "Aylık 500 hakkın dolarsa ek SMS satın al.",
+          "hint": "Bundle kredileri ay sonunda sıfırlanmaz, kullanılana kadar durur."
+        },
+        "proCheckout": {
+          "title": "Pro Aboneliği",
+          "description": "Sınırsız randevu + 500 SMS + WhatsApp + raporlar.",
+          "suffix": "/ay"
+        },
+        "bundleCheckout": {
+          "title": "SMS Bundle",
+          "description": "{count} SMS — bitene kadar geçerli."
+        }
+      },
+      "profile": {
+        "title": "Profil",
+        "subtitle": "Booking sayfanda gözüken bilgiler.",
+        "ad_soyad": "Ad Soyad veya Firma Adı",
+        "telefon": "Telefon",
+        "email": "E-posta"
+      },
+      "slug": {
+        "title": "Public link",
+        "subtitle": "Müşterilerine vereceğin link.",
+        "label": "Kullanıcı adı",
+        "preview": "Önizleme:",
+        "suggest": "İsme göre öner"
+      },
+      "hours": {
+        "title": "Çalışma saatleri",
+        "subtitle": "Hangi günler, hangi saatlerde randevu kabul ediyorsun?",
+        "slot": "Randevu süresi",
+        "slotUnit": "dakika",
+        "lunchTitle": "Öğle arası",
+        "lunchOff": "Öğle arası yok",
+        "dayClosed": "Kapalı",
+        "days": {
+          "mon": "Pazartesi",
+          "tue": "Salı",
+          "wed": "Çarşamba",
+          "thu": "Perşembe",
+          "fri": "Cuma",
+          "sat": "Cumartesi",
+          "sun": "Pazar"
+        }
+      }
+    },
+    "link": {
+      "title": "Link & QR",
+      "subtitle": "Müşterilerine gönderebileceğin link ve QR kart.",
+      "qrSection": {
+        "title": "QR Kod",
+        "subtitle": "Kartvizitine bastır, vitrine as, broşüre koy.",
+        "downloadPng": "PNG indir",
+        "downloadSvg": "SVG indir"
+      },
+      "storySection": {
+        "title": "Paylaşıma hazır kart",
+        "subtitle": "Instagram-story boyutu (1080×1920).",
+        "downloadPng": "Story PNG indir",
+        "downloadSvg": "Story SVG indir"
+      },
+      "tip": "İpucu: QR'ı vitrinine asabilir, Instagram bio'na yapıştırabilirsin. Story kartını bir kez paylaş, takipçilerin tek tıkla randevu alsın."
+    },
+    "appointments": {
+      "title": "Randevular",
+      "subtitle": "Müşterilerinden gelen randevular.",
+      "empty": "Henüz randevu yok.",
+      "emptyHint": "Müşterilerin linkine tıkladığında randevular burada gözükür.",
+      "filters": {
+        "all": "Tümü",
+        "today": "Bugün",
+        "tomorrow": "Yarın",
+        "week": "Bu hafta",
+        "cancelled": "İptaller"
+      },
+      "status": {
+        "confirmed": "Onaylı",
+        "online": "Online",
+        "manual": "Manuel",
+        "cancelled": "İptal",
+        "completed": "Tamamlandı"
+      },
+      "cancel": "İptal et",
+      "cancelling": "İptal ediliyor…",
+      "confirmCancel": "Bu randevuyu iptal etmek istediğine emin misin?",
+      "newModal": {
+        "trigger": "Yeni randevu",
+        "title": "Yeni randevu oluştur",
+        "subtitle": "Müşterine onay SMS'i göndereceğiz.",
+        "ad_soyad": "Müşteri adı",
+        "ad_soyadPlaceholder": "Adı Soyadı",
+        "telefon": "Telefon",
+        "date": "Tarih",
+        "time": "Saat",
+        "submit": "Oluştur",
+        "submitting": "Oluşturuluyor…",
+        "cancel": "Vazgeç"
+      }
+    },
+    "customers": {
+      "title": "Müşteriler",
+      "subtitle": "Sana randevu alan kişiler.",
+      "empty": "Henüz müşterin yok.",
+      "emptyHint": "İlk randevu geldiğinde müşterin burada listelenir.",
+      "bookings": "{count} randevu",
+      "lastBooking": "Son: {date}",
+      "detail": {
+        "call": "Ara",
+        "whatsapp": "WhatsApp",
+        "totalBookings": "Toplam",
+        "lastBooking": "Son",
+        "memberSince": "Üyelik",
+        "history": "Randevu geçmişi",
+        "emptyHistory": "Bu müşterinin geçmiş randevusu yok."
+      }
+    },
+    "nav": {
+      "dashboard": "Panel",
+      "appointments": "Randevular",
+      "customers": "Müşteriler",
+      "link": "Link & QR",
+      "reports": "Raporlar",
+      "settings": "Ayarlar",
+      "logout": "Çıkış"
+    },
+    "reports": {
+      "title": "Raporlar",
+      "subtitle": "Son 30 günün performansı.",
+      "empty": "Bu dönemde veri yok.",
+      "stats": {
+        "visits": "Ziyaret",
+        "bookings": "Randevu",
+        "conversion": "Dönüşüm",
+        "customers": "Yeni müşteri"
+      },
+      "dailyVisits": {
+        "title": "Günlük ziyaret",
+        "range": "Son 30 gün"
+      },
+      "popularDays": "Popüler günler",
+      "popularHours": "Popüler saatler"
+    },
+    "avatar": {
+      "title": "Avatar",
+      "description": "Profil görselini seç — harf, sektör simgesi ya da kendi resmin.",
+      "color": "Renk",
+      "sectorIcon": "Sektör simgesi",
+      "uploadCta": "Bilgisayardan seç",
+      "changeImage": "Resmi değiştir",
+      "uploadHint": "JPG, PNG, WebP, GIF · Maks 5MB",
+      "uploading": "Yükleniyor…",
+      "uploadTooLarge": "Dosya 5MB'ı geçemez.",
+      "uploadInvalidType": "Sadece JPG, PNG, WebP, GIF.",
+      "removeImage": "Resmi kaldır",
+      "cropTitle": "Resmi kırp",
+      "cropDescription": "Avatarın için kareyi ayarla.",
+      "cropSave": "Kaydet",
+      "cropCancel": "Vazgeç",
+      "cropFailed": "Kırpma başarısız.",
+      "zoom": "Yakınlaştırma",
+      "modes": {
+        "initial": "Harf",
+        "icon": "Simge",
+        "image": "Resim"
+      },
+      "sectors": {
+        "scissors": "Kuaför / Berber",
+        "sparkles": "Güzellik salonu",
+        "stethoscope": "Doktor / Klinik",
+        "paw": "Veteriner",
+        "dumbbell": "Spor salonu / PT",
+        "camera": "Fotoğrafçı",
+        "flower": "SPA / Masaj",
+        "briefcase": "Danışman / Avukat"
+      }
+    }
+  },
+  "booking": {
+    "header": {
+      "subtitle": "Randevu defterim"
+    },
+    "calendar": {
+      "prev": "Önceki ay",
+      "next": "Sonraki ay",
+      "weekdays": ["Pzt", "Sal", "Çar", "Per", "Cum", "Cmt", "Paz"],
+      "noBookable": "Bu ay müsait gün yok."
+    },
+    "slot": {
+      "title": "{date} için saat seç",
+      "noSlots": "Bu güne ait müsait saat yok.",
+      "pickFirst": "Önce bir tarih seç."
+    },
+    "customer": {
+      "title": "Bilgilerini gir",
+      "subtitle": "Telefonuna SMS ile 6 haneli kod göndereceğiz.",
+      "ad_soyad": "Adın Soyadın",
+      "ad_soyadPlaceholder": "Adın",
+      "telefon": "Telefon",
+      "submit": "Devam et",
+      "submitting": "Gönderiliyor…",
+      "back": "Saati değiştir"
+    },
+    "otp": {
+      "title": "Kodu gir",
+      "subtitle": "{phone} numarasına 6 haneli kod gönderdik.",
+      "submit": "Randevuyu oluştur",
+      "submitting": "Oluşturuluyor…",
+      "back": "Bilgilerimi düzenle",
+      "resend": "Kodu tekrar gönder",
+      "resendIn": "{seconds} sn sonra"
+    },
+    "confirmed": {
+      "title": "Randevun hazır",
+      "subtitle": "Detayları SMS ile gönderdik.",
+      "cancelHint": "İptal etmek istersen SMS'teki linki kullanabilirsin.",
+      "another": "Yeni randevu al"
+    },
+    "notFound": {
+      "title": "Bu sayfa bulunamadı",
+      "subtitle": "Linkte yazım hatası olabilir ya da firma artık aktif değil.",
+      "home": "Ana sayfaya dön"
+    },
+    "powered": "ile çalışıyor"
+  },
+  "payment": {
+    "amount": "Tutar",
+    "cardNumber": "Kart numarası",
+    "cardHolder": "Kart üzerindeki isim",
+    "expiry": "Son kullanma",
+    "cvc": "CVC",
+    "secureHint": "256-bit SSL ile şifrelenir · 3D Secure ile doğrulanır",
+    "payCta": "Ödemeyi tamamla — {amount}",
+    "processing": "Ödeme işleniyor…",
+    "successTitle": "Ödeme başarılı",
+    "successSubtitle": "Aboneliğin aktif edildi.",
+    "testMode": "Test modu — gerçek tahsilat yapılmaz"
+  },
+  "cancel": {
+    "title": "Randevuyu iptal et",
+    "subtitle": "Aşağıdaki randevuyu iptal etmek istediğine emin misin?",
+    "confirm": "Evet, iptal et",
+    "cancelling": "İptal ediliyor…",
+    "keep": "Vazgeç, kalsın",
+    "done": "Randevun iptal edildi.",
+    "doneHint": "Yeni randevu almak istersen tekrar buyur.",
+    "newBooking": "Yeni randevu al",
+    "notFound": "Bu link geçersiz ya da süresi dolmuş.",
+    "alreadyCancelled": "Bu randevu zaten iptal edilmiş."
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx --yes create-next-app@latest . --typescript --tailwind --app --src-dir --eslint --import-alias \"@/*\" --use-npm --turbopack --no-git --yes)",
+      "Bash(npm ls *)",
+      "Bash(npm run *)",
+      "Read(//c/Users/Personel/AppData/Local/Temp/claude/C--Users-Personel-Desktop-Projeler-rndv/bfafd1b8-70e9-4b92-95f7-ae03e7056964/tasks/**)",
+      "Bash(curl -sI http://localhost:3000)",
+      "Bash(curl -s http://localhost:3000)",
+      "Bash(curl -sI http://localhost:3000/en)",
+      "Bash(taskkill //F //IM node.exe)"
+    ]
+  }
+}

@@ -1,0 +1,522 @@
+{
+  "common": {
+    "appName": "rndv",
+    "tagline": "Your booking page, in your pocket.",
+    "back": "Back",
+    "save": "Save",
+    "saving": "Saving…",
+    "saved": "Saved.",
+    "cancel": "Cancel",
+    "yes": "Yes",
+    "no": "No"
+  },
+  "nav": {
+    "forBusinesses": "For businesses",
+    "login": "Log in",
+    "signup": "Sign up"
+  },
+  "landing": {
+    "badge": "New · rndv.click",
+    "title": "Bookings made simple",
+    "description": "Send one link to your customers. They book in seconds — no signup, SMS verified, done.",
+    "ctaPrimary": "Get started free",
+    "ctaSecondary": "View demo profile",
+    "nav": {
+      "pricing": "Pricing",
+      "features": "Features"
+    },
+    "card": {
+      "business": "Ayse Salon",
+      "service": "30 min appointment",
+      "time": "Tomorrow · 2:30 PM",
+      "cta": "Book with rndv"
+    },
+    "features": {
+      "kicker": "What's included",
+      "title": "Everything you need, nothing extra",
+      "subtitle": "Just enough to run bookings — clean, fast, customer-friendly.",
+      "items": {
+        "sms": {
+          "title": "SMS automation",
+          "description": "Confirmation after booking, 24h reminder before. You don't lift a finger."
+        },
+        "qr": {
+          "title": "QR & share card",
+          "description": "Window-friendly QR + Instagram-story 1080×1920 card — one-click download."
+        },
+        "reports": {
+          "subtitle": "Daily visits, conversion rate, popular hours — measure your performance.",
+          "title": "Reports",
+          "description": "Daily visits, conversion rate, popular hours — measure your performance."
+        },
+        "i18n": {
+          "title": "Turkish & English",
+          "description": "Local customer, tourist or international staff — everyone books in their language."
+        }
+      }
+    },
+    "how": {
+      "kicker": "How it works",
+      "title": "Your booking page in 3 steps",
+      "step1": {
+        "title": "Create your account",
+        "description": "Name, phone, email. SMS-verified in 30 seconds."
+      },
+      "step2": {
+        "title": "Set your hours",
+        "description": "Pick the days and times you're available, set your slot length."
+      },
+      "step3": {
+        "title": "Share your link",
+        "description": "Instagram, WhatsApp, business card — one tap to book."
+      }
+    },
+    "sectors": {
+      "kicker": "For everyone",
+      "title": "Whatever your business",
+      "subtitle": "Any appointment-based business can use rndv.",
+      "items": {
+        "barber": "Hairdresser / Barber",
+        "beauty": "Beauty salon",
+        "doctor": "Doctor / Clinic",
+        "vet": "Veterinary",
+        "trainer": "Gym / Trainer",
+        "spa": "Spa / Massage"
+      }
+    },
+    "pricing": {
+      "kicker": "Pricing",
+      "title": "Start small, scale later",
+      "subtitle": "Test everything on Free. Upgrade to Pro when you're ready.",
+      "month": "month",
+      "disclaimer": "Pro plan doesn't auto-renew — stop anytime.",
+      "free": {
+        "name": "Free",
+        "tagline": "Start small, free forever.",
+        "perk1": "30 bookings/month",
+        "perk2": "Public booking link + QR card",
+        "perk3": "Customer OTP verification",
+        "cta": "Start free"
+      },
+      "pro": {
+        "name": "Pro",
+        "tagline": "For professional use.",
+        "perk1": "Unlimited bookings",
+        "perk2": "500 SMS/mo (confirm + reminder)",
+        "perk3": "WhatsApp notifications",
+        "perk4": "Reports & analytics",
+        "perk5": "Buy extra SMS bundles",
+        "cta": "Get Pro"
+      }
+    },
+    "testimonials": {
+      "kicker": "Customers",
+      "title": "Trusted by pros",
+      "items": {
+        "ayse": {
+          "quote": "I used to take 20 calls a day. Now customers book themselves and the reminder SMS cut my no-shows in half.",
+          "name": "Ayse Kaya",
+          "role": "Hairdresser, Istanbul"
+        },
+        "mehmet": {
+          "quote": "I tried expensive dental booking software. rndv is simpler, cheaper, and my patients book by scanning a QR.",
+          "name": "Dr. Mehmet Yilmaz",
+          "role": "Dentist, Ankara"
+        },
+        "selin": {
+          "quote": "Put my rndv link in Instagram bio and the QR card in a story — got 12 bookings the same day. Never had that traction before.",
+          "name": "Selin Aksoy",
+          "role": "SPA & Massage Owner"
+        }
+      }
+    },
+    "faq": {
+      "kicker": "FAQ",
+      "title": "Common questions",
+      "items": {
+        "q1": {
+          "q": "How long does setup take?",
+          "a": "About 2 minutes. Sign up, verify SMS, set your hours, share your link. Customers can book immediately."
+        },
+        "q2": {
+          "q": "Who pays for SMS?",
+          "a": "Free plan doesn't send SMS (in-app confirm). Pro includes 500 SMS/month. Beyond that, buy extra bundles (₺50 / 250 SMS)."
+        },
+        "q3": {
+          "q": "Do customers need to sign up?",
+          "a": "No. They tap your link, pick a slot, enter name + phone, verify the 6-digit SMS. No account needed."
+        },
+        "q4": {
+          "q": "Who can cancel a booking?",
+          "a": "Both the customer (via SMS cancel link) and you (from the panel). The other side is automatically notified."
+        },
+        "q5": {
+          "q": "Where is my data stored?",
+          "a": "All data sits on Supabase (KVKK-compliant, EU servers). Only you can access it — row-level security blocks others entirely."
+        },
+        "q6": {
+          "q": "Can I change my hours later?",
+          "a": "Yes, anytime in settings. New bookings respect the new hours immediately; existing ones are unaffected."
+        }
+      }
+    },
+    "finalCta": {
+      "kicker": "Get started",
+      "title": "Your booking page in 2 minutes",
+      "subtitle": "Start free, no card required. Upgrade when you're ready.",
+      "primary": "Create free account",
+      "secondary": "See pricing"
+    },
+    "footer": {
+      "tagline": "Fast, clean, booking-focused.",
+      "rights": "All rights reserved.",
+      "product": "Product",
+      "features": "Features",
+      "pricing": "Pricing",
+      "account": "Account",
+      "legal": "Legal",
+      "terms": "Terms of service",
+      "privacy": "Privacy policy"
+    }
+  },
+  "auth": {
+    "signup": {
+      "title": "Create your account",
+      "subtitle": "Your booking page is ready in 30 seconds.",
+      "ad_soyad": "Full name or business name",
+      "ad_soyadPlaceholder": "Ayse Salon",
+      "telefon": "Phone",
+      "telefonPlaceholder": "5XX XXX XX XX",
+      "telefonHint": "Used for SMS verification.",
+      "email": "Email",
+      "emailPlaceholder": "you@example.com",
+      "parola": "Password",
+      "parolaHint": "At least 6 characters.",
+      "submit": "Continue",
+      "submitting": "Sending…",
+      "haveAccount": "Already have an account?",
+      "loginLink": "Log in"
+    },
+    "login": {
+      "title": "Welcome back",
+      "subtitle": "Let's open your booking page.",
+      "email": "Email",
+      "parola": "Password",
+      "submit": "Log in",
+      "submitting": "Signing in…",
+      "noAccount": "No account yet?",
+      "signupLink": "Sign up"
+    },
+    "otp": {
+      "title": "Verify your phone",
+      "subtitle": "We sent a 6-digit code to {phone}.",
+      "submit": "Verify",
+      "submitting": "Verifying…",
+      "resend": "Resend code",
+      "resendIn": "Resend in {seconds}s",
+      "resending": "Sending…",
+      "wrongNumber": "Need to change your number?",
+      "restart": "Start over"
+    }
+  },
+  "app": {
+    "dashboard": {
+      "title": "Welcome, {name}",
+      "subtitle": "Your booking page is live.",
+      "publicLink": {
+        "title": "Your booking link",
+        "subtitle": "Share this with your customers — they book in seconds.",
+        "copy": "Copy",
+        "copied": "Copied",
+        "open": "Open"
+      },
+      "stats": {
+        "today": "Today",
+        "week": "This week",
+        "customers": "Customers"
+      },
+      "todayList": "Today's appointments",
+      "today": "No appointments today.",
+      "emptyHint": "Bookings will show up here when customers tap your link."
+    },
+    "plan": {
+      "free": "Free",
+      "pro": "Pro",
+      "bookingsUsed": "{used}/{limit} bookings this month",
+      "smsUsed": "{used}/{included} SMS this month",
+      "smsBundleUsage": "{credits} credits left (bundle)",
+      "proUntil": "Pro · active until {date}",
+      "freeFullHint": "You've hit this month's free bookings limit.",
+      "upgradeCta": "Upgrade to Pro",
+      "manageCta": "Manage subscription"
+    },
+    "settings": {
+      "title": "Settings",
+      "subtitle": "Manage your profile and working hours.",
+      "subscription": {
+        "title": "Subscription",
+        "subtitle": "Current plan and billing.",
+        "activeUntil": "Active until {date}",
+        "bookingsThisMonth": "Bookings this month",
+        "smsThisMonth": "SMS sent this month",
+        "bundleCredits": "Bonus credits: {count} SMS",
+        "upgradeCta": "Upgrade to Pro · ₺499/mo",
+        "downgradeCta": "Back to Free",
+        "perks": {
+          "unlimitedBookings": "Unlimited bookings",
+          "smsIncluded": "500 SMS/mo included",
+          "whatsapp": "WhatsApp notifications",
+          "reports": "Reports & analytics"
+        },
+        "bundles": {
+          "title": "SMS Bundles",
+          "subtitle": "Top up extra SMS after your monthly 500.",
+          "hint": "Bundle credits don't expire monthly — they stay until used."
+        },
+        "proCheckout": {
+          "title": "Pro Subscription",
+          "description": "Unlimited bookings + 500 SMS + WhatsApp + reports.",
+          "suffix": "/mo"
+        },
+        "bundleCheckout": {
+          "title": "SMS Bundle",
+          "description": "{count} SMS — valid until used up."
+        }
+      },
+      "profile": {
+        "title": "Profile",
+        "subtitle": "What customers see on your booking page.",
+        "ad_soyad": "Full name or business name",
+        "telefon": "Phone",
+        "email": "Email"
+      },
+      "slug": {
+        "title": "Public link",
+        "subtitle": "The URL you'll share with customers.",
+        "label": "Username",
+        "preview": "Preview:",
+        "suggest": "Suggest from name"
+      },
+      "hours": {
+        "title": "Working hours",
+        "subtitle": "Which days and times do you accept bookings?",
+        "slot": "Slot length",
+        "slotUnit": "min",
+        "lunchTitle": "Lunch break",
+        "lunchOff": "No lunch break",
+        "dayClosed": "Closed",
+        "days": {
+          "mon": "Monday",
+          "tue": "Tuesday",
+          "wed": "Wednesday",
+          "thu": "Thursday",
+          "fri": "Friday",
+          "sat": "Saturday",
+          "sun": "Sunday"
+        }
+      }
+    },
+    "link": {
+      "title": "Link & QR",
+      "subtitle": "Your shareable booking link and QR card.",
+      "qrSection": {
+        "title": "QR code",
+        "subtitle": "Print it on your business card, stick it on the window.",
+        "downloadPng": "Download PNG",
+        "downloadSvg": "Download SVG"
+      },
+      "storySection": {
+        "title": "Story-ready share card",
+        "subtitle": "Instagram-story sized (1080×1920).",
+        "downloadPng": "Download story PNG",
+        "downloadSvg": "Download story SVG"
+      },
+      "tip": "Tip: Stick the QR in your shop window or share the story card once — followers can book in one tap."
+    },
+    "appointments": {
+      "title": "Appointments",
+      "subtitle": "Bookings from your customers.",
+      "empty": "No appointments yet.",
+      "emptyHint": "Bookings will show up here when customers tap your link.",
+      "filters": {
+        "all": "All",
+        "today": "Today",
+        "tomorrow": "Tomorrow",
+        "week": "This week",
+        "cancelled": "Cancelled"
+      },
+      "status": {
+        "confirmed": "Confirmed",
+        "online": "Online",
+        "manual": "Manual",
+        "cancelled": "Cancelled",
+        "completed": "Completed"
+      },
+      "cancel": "Cancel",
+      "cancelling": "Cancelling…",
+      "confirmCancel": "Cancel this appointment?",
+      "newModal": {
+        "trigger": "New appointment",
+        "title": "Create a new appointment",
+        "subtitle": "We'll send a confirmation SMS to the customer.",
+        "ad_soyad": "Customer name",
+        "ad_soyadPlaceholder": "Full name",
+        "telefon": "Phone",
+        "date": "Date",
+        "time": "Time",
+        "submit": "Create",
+        "submitting": "Creating…",
+        "cancel": "Cancel"
+      }
+    },
+    "customers": {
+      "title": "Customers",
+      "subtitle": "People who've booked with you.",
+      "empty": "No customers yet.",
+      "emptyHint": "Your first customer will appear here after their first booking.",
+      "bookings": "{count} bookings",
+      "lastBooking": "Last: {date}",
+      "detail": {
+        "call": "Call",
+        "whatsapp": "WhatsApp",
+        "totalBookings": "Total",
+        "lastBooking": "Last",
+        "memberSince": "Joined",
+        "history": "Booking history",
+        "emptyHistory": "No past bookings for this customer."
+      }
+    },
+    "nav": {
+      "dashboard": "Dashboard",
+      "appointments": "Appointments",
+      "customers": "Customers",
+      "link": "Link & QR",
+      "reports": "Reports",
+      "settings": "Settings",
+      "logout": "Log out"
+    },
+    "reports": {
+      "title": "Reports",
+      "subtitle": "Last 30 days at a glance.",
+      "empty": "No data for this period.",
+      "stats": {
+        "visits": "Visits",
+        "bookings": "Bookings",
+        "conversion": "Conversion",
+        "customers": "New customers"
+      },
+      "dailyVisits": {
+        "title": "Daily visits",
+        "range": "Last 30 days"
+      },
+      "popularDays": "Popular days",
+      "popularHours": "Popular hours"
+    },
+    "avatar": {
+      "title": "Avatar",
+      "description": "Pick your profile look — initial, sector icon, or upload your own.",
+      "color": "Color",
+      "sectorIcon": "Sector icon",
+      "uploadCta": "Choose a file",
+      "changeImage": "Change image",
+      "uploadHint": "JPG, PNG, WebP, GIF · Max 5MB",
+      "uploading": "Uploading…",
+      "uploadTooLarge": "File can't exceed 5MB.",
+      "uploadInvalidType": "Only JPG, PNG, WebP, GIF.",
+      "removeImage": "Remove image",
+      "cropTitle": "Crop image",
+      "cropDescription": "Frame your avatar.",
+      "cropSave": "Save",
+      "cropCancel": "Cancel",
+      "cropFailed": "Crop failed.",
+      "zoom": "Zoom",
+      "modes": {
+        "initial": "Letter",
+        "icon": "Icon",
+        "image": "Image"
+      },
+      "sectors": {
+        "scissors": "Hairdresser / Barber",
+        "sparkles": "Beauty salon",
+        "stethoscope": "Doctor / Clinic",
+        "paw": "Veterinary",
+        "dumbbell": "Gym / Trainer",
+        "camera": "Photographer",
+        "flower": "Spa / Massage",
+        "briefcase": "Consultant / Lawyer"
+      }
+    }
+  },
+  "booking": {
+    "header": {
+      "subtitle": "Booking page"
+    },
+    "calendar": {
+      "prev": "Previous month",
+      "next": "Next month",
+      "weekdays": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+      "noBookable": "No available days this month."
+    },
+    "slot": {
+      "title": "Pick a time for {date}",
+      "noSlots": "No available slots on this day.",
+      "pickFirst": "Pick a date first."
+    },
+    "customer": {
+      "title": "Your details",
+      "subtitle": "We'll text a 6-digit code to your phone.",
+      "ad_soyad": "Your full name",
+      "ad_soyadPlaceholder": "Your name",
+      "telefon": "Phone",
+      "submit": "Continue",
+      "submitting": "Sending…",
+      "back": "Change time"
+    },
+    "otp": {
+      "title": "Enter the code",
+      "subtitle": "We sent a 6-digit code to {phone}.",
+      "submit": "Create booking",
+      "submitting": "Creating…",
+      "back": "Edit my details",
+      "resend": "Resend code",
+      "resendIn": "Resend in {seconds}s"
+    },
+    "confirmed": {
+      "title": "You're booked",
+      "subtitle": "We sent the details via SMS.",
+      "cancelHint": "To cancel, use the link in your SMS.",
+      "another": "Book another"
+    },
+    "notFound": {
+      "title": "Page not found",
+      "subtitle": "This link may have a typo or the business isn't active anymore.",
+      "home": "Back to home"
+    },
+    "powered": "powered by"
+  },
+  "payment": {
+    "amount": "Amount",
+    "cardNumber": "Card number",
+    "cardHolder": "Name on card",
+    "expiry": "Expiry",
+    "cvc": "CVC",
+    "secureHint": "256-bit SSL · 3D Secure verified",
+    "payCta": "Complete payment — {amount}",
+    "processing": "Processing payment…",
+    "successTitle": "Payment successful",
+    "successSubtitle": "Your subscription is active.",
+    "testMode": "Test mode — no real charge"
+  },
+  "cancel": {
+    "title": "Cancel appointment",
+    "subtitle": "Are you sure you want to cancel this appointment?",
+    "confirm": "Yes, cancel",
+    "cancelling": "Cancelling…",
+    "keep": "Never mind, keep it",
+    "done": "Your appointment is cancelled.",
+    "doneHint": "Feel free to book again anytime.",
+    "newBooking": "Book again",
+    "notFound": "This link is invalid or has expired.",
+    "alreadyCancelled": "This appointment was already cancelled."
+  }
+}
