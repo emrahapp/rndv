@@ -5,6 +5,7 @@ import { setRequestLocale } from "next-intl/server";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import { routing } from "@/i18n/routing";
+import { ScrollToTop } from "@/components/scroll-to-top";
 import { Toaster } from "@/components/ui/toaster";
 import "../globals.css";
 
@@ -39,6 +40,7 @@ export default async function LocaleLayout({
     >
       <body className="min-h-screen bg-background font-sans antialiased">
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <ScrollToTop />
         <Toaster />
       </body>
     </html>
