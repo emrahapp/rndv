@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import { usePathname } from "@/i18n/navigation";
+import { usePathname } from "next/navigation";
 
 /**
  * On every route change, jumps the window back to the top.
