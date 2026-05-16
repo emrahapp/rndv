@@ -52,18 +52,25 @@ export const sms = {
   bookingOtp: (businessName: string, otp: string) =>
     `${stripTr(businessName)} - rndv\n\nRandevu kodun: ${otp}\nKod 10 dakika gecerli.`,
 
-  /** Customer received this after their OTP-verified booking succeeded. */
+  /**
+   * Customer received this after their OTP-verified booking succeeded.
+   *
+   * Kept deliberately short (<160 GSM-7 chars including the Twilio trial
+   * "Sent from your Twilio trial account - " prefix) so the SMS stays as
+   * a single segment. Multi-segment messages on Turkish operator routes
+   * occasionally get partial-drops, which is what caused the "only a few
+   * chars arrived" bug. Add the cancel URL back once we're off the trial
+   * line and on Netgsm.
+   */
   bookingConfirmed: (opts: {
     businessName: string;
     date: string;
     time: string;
-    cancelUrl: string;
   }) =>
     [
       `${stripTr(opts.businessName)} randevun onaylandi.`,
-      "",
       `${fmtDateSms(opts.date)} saat ${opts.time}`,
-      `Iptal: ${opts.cancelUrl}`,
+      `Iptal icin firmayi ara.`,
     ].join("\n"),
 
   /** Owner created this booking manually for the customer. */
@@ -71,28 +78,18 @@ export const sms = {
     businessName: string;
     date: string;
     time: string;
-    cancelUrl: string;
   }) =>
     [
       `${stripTr(opts.businessName)} senin icin randevu olusturdu.`,
-      "",
       `${fmtDateSms(opts.date)} saat ${opts.time}`,
-      `Iptal: ${opts.cancelUrl}`,
     ].join("\n"),
 
   /** Sent to customer 24h before the appointment. */
   reminder24h: (opts: {
     businessName: string;
-    date: string;
     time: string;
-    cancelUrl: string;
   }) =>
-    [
-      `Yarinki randevun:`,
-      `${stripTr(opts.businessName)} saat ${opts.time}`,
-      "",
-      `Iptal: ${opts.cancelUrl}`,
-    ].join("\n"),
+    `Yarinki randevun: ${stripTr(opts.businessName)} saat ${opts.time}`,
 
   /** Sent to customer when owner cancels their appointment. */
   cancelledByOwner: (opts: {

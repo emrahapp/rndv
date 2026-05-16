@@ -342,7 +342,6 @@
         "all": "All",
         "today": "Today",
         "tomorrow": "Tomorrow",
-        "week": "This week",
         "cancelled": "Cancelled"
       },
       "status": {

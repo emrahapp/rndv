@@ -181,9 +181,6 @@ export async function verifyBookingOtpAction(
     return { ok: false, error: created.error ?? "Randevu oluşturulamadı." };
   }
 
-  const appUrl =
-    process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000";
-
   // Customer SMS (business-paid → plan-gated)
   await sendBusinessSms({
     businessId: meta.business_id,
@@ -193,7 +190,6 @@ export async function verifyBookingOtpAction(
       businessName: meta.business_name,
       date: meta.date,
       time: meta.time,
-      cancelUrl: `${appUrl}/iptal/${created.appointment.cancelToken}`,
     }),
   });
 
@@ -341,8 +337,6 @@ export async function createManualAppointmentAction(
     return { ok: false, error: result.error ?? "Randevu oluşturulamadı." };
   }
 
-  const appUrl =
-    process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000";
   await sendBusinessSms({
     businessId: business.id,
     to: telefon,
@@ -351,7 +345,6 @@ export async function createManualAppointmentAction(
       businessName: business.ad_soyad,
       date,
       time,
-      cancelUrl: `${appUrl}/iptal/${result.appointment.cancelToken}`,
     }),
   });
 

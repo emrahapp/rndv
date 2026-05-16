@@ -7,9 +7,9 @@ import { cancelAppointmentAction } from "@/lib/appointments/actions";
 import type { Appointment } from "@/lib/appointments/types";
 import { cn } from "@/lib/utils";
 
-type Filter = "all" | "today" | "tomorrow" | "week" | "cancelled";
+type Filter = "all" | "today" | "tomorrow" | "cancelled";
 
-const FILTERS: Filter[] = ["all", "today", "tomorrow", "week", "cancelled"];
+const FILTERS: Filter[] = ["all", "today", "tomorrow", "cancelled"];
 
 export function AppointmentsList({
   slug,
@@ -33,12 +33,6 @@ export function AppointmentsList({
     return formatDate(d);
   }, [todayStr]);
 
-  const weekEnd = useMemo(() => {
-    const d = new Date(todayStr);
-    d.setDate(d.getDate() + 7);
-    return formatDate(d);
-  }, [todayStr]);
-
   const filtered = useMemo(() => {
     const items = appointments.filter((a) => {
       switch (filter) {
@@ -46,10 +40,6 @@ export function AppointmentsList({
           return a.status !== "cancelled" && a.date === todayStr;
         case "tomorrow":
           return a.status !== "cancelled" && a.date === tomorrowStr;
-        case "week":
-          return (
-            a.status !== "cancelled" && a.date >= todayStr && a.date <= weekEnd
-          );
         case "all":
           return a.status !== "cancelled";
         case "cancelled":
@@ -63,7 +53,7 @@ export function AppointmentsList({
       const bKey = `${b.date}T${b.time}`;
       return aKey.localeCompare(bKey);
     });
-  }, [appointments, filter, todayStr, tomorrowStr, weekEnd]);
+  }, [appointments, filter, todayStr, tomorrowStr]);
 
   const dateFormatter = useMemo(
     () =>
