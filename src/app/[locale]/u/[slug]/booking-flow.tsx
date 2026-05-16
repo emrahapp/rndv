@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState, useTransition } from "react";
+import { useEffect, useMemo, useRef, useState, useTransition } from "react";
 import { useTranslations } from "next-intl";
 import { ArrowLeft, Check, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -93,6 +93,20 @@ export function BookingFlow({
     const id = setTimeout(() => setCooldown((c) => c - 1), 1000);
     return () => clearTimeout(id);
   }, [step, cooldown]);
+
+  // Auto-scroll to the slot grid after the user picks a date — especially
+  // helpful on mobile where the slot section drops below the fold.
+  const slotsRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (!pickedDate) return;
+    const id = requestAnimationFrame(() => {
+      slotsRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    });
+    return () => cancelAnimationFrame(id);
+  }, [pickedDate]);
 
   const dateFormatter = useMemo(
     () =>
@@ -230,7 +244,7 @@ export function BookingFlow({
           />
 
           {pickedDate && (
-            <div className="space-y-3">
+            <div ref={slotsRef} className="space-y-3 scroll-mt-4">
               <h2 className="text-sm font-medium">
                 {t("slot.title", { date: formatPicked() })}
               </h2>
