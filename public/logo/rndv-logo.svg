@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <circle cx="256" cy="256" r="256" fill="#00d66f"/>
+  <g transform="translate(92.16 92.16) scale(13.653333333333334)">
+    <polyline points="6 11 10 15 18 7"
+      fill="none"
+      stroke="#0a0a0a"
+      stroke-width="3"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      vector-effect="non-scaling-stroke"
+      style="stroke-width:40.96px"/>
+  </g>
+</svg>

@@ -1,29 +1,35 @@
 /**
  * Central SMS template registry.
  *
- *  We deliberately keep messages ASCII-only. Operator-level filters on
- *  Turkish mobile networks frequently drop UCS-2-encoded (Turkish-accented)
- *  SMS coming from international long codes — we'd rather lose the cedillas
- *  than the message. Once Netgsm (local route) is wired up we can switch
- *  back to full diacritics safely.
+ * Designed for **Netgsm** (Turkish local SMS gateway):
+ *   - Full Turkish diacritics (`şğüçöı`) are safe — Netgsm sends in TR
+ *     encoding (UCS-2 with Turkish support), no operator-level character
+ *     filtering on local routes.
+ *   - Segment limits: TR encoding = 155 chars per segment, up to 458 in
+ *     3 concatenated segments. Plenty of room for body + cancel URL.
+ *   - No "trial account" prefix to worry about (vs Twilio).
+ *
+ * If we ever fall back to Twilio international routes, see git history
+ * for the ASCII-only variants — `stripTr()` is kept as a helper below
+ * so any one template can opt in to GSM-7 safety on demand.
  */
 
 const MONTHS_TR = [
   "Oca",
-  "Sub",
+  "Şub",
   "Mar",
   "Nis",
   "May",
   "Haz",
   "Tem",
-  "Agu",
+  "Ağu",
   "Eyl",
   "Eki",
   "Kas",
   "Ara",
 ];
 
-const DAYS_TR = ["Paz", "Pzt", "Sal", "Car", "Per", "Cum", "Cmt"];
+const DAYS_TR = ["Paz", "Pzt", "Sal", "Çar", "Per", "Cum", "Cmt"];
 
 /** "2026-05-18" → "18 May Pzt" — short ASCII Turkish date for SMS. */
 export function fmtDateSms(dateStr: string): string {
@@ -44,33 +50,25 @@ export function toE164(phone: string): string {
 // ────────────────────────────────────────────────────────────
 
 export const sms = {
-  /** Owner phone verification on signup. */
+  /** Owner phone verification on signup. Platform-paid. */
   signupOtp: (otp: string) =>
-    `rndv dogrulama kodun: ${otp}\n\nKod 10 dakika gecerli, kimseyle paylasma.`,
+    `rndv doğrulama kodun: ${otp}\n\nKod 10 dakika geçerli, kimseyle paylaşma.`,
 
-  /** Customer phone verification on /u/[slug]. */
+  /** Customer phone verification on /u/[slug]. Platform-paid. */
   bookingOtp: (businessName: string, otp: string) =>
-    `${stripTr(businessName)} - rndv\n\nRandevu kodun: ${otp}\nKod 10 dakika gecerli.`,
+    `${businessName} - rndv\n\nRandevu kodun: ${otp}\nKod 10 dakika geçerli.`,
 
-  /**
-   * Customer received this after their OTP-verified booking succeeded.
-   *
-   * Kept deliberately short (<160 GSM-7 chars including the Twilio trial
-   * "Sent from your Twilio trial account - " prefix) so the SMS stays as
-   * a single segment. Multi-segment messages on Turkish operator routes
-   * occasionally get partial-drops, which is what caused the "only a few
-   * chars arrived" bug. Add the cancel URL back once we're off the trial
-   * line and on Netgsm.
-   */
+  /** Customer received this after their OTP-verified booking succeeded. */
   bookingConfirmed: (opts: {
     businessName: string;
     date: string;
     time: string;
+    cancelUrl: string;
   }) =>
     [
-      `${stripTr(opts.businessName)} randevun onaylandi.`,
+      `${opts.businessName} randevun onaylandı.`,
       `${fmtDateSms(opts.date)} saat ${opts.time}`,
-      `Iptal icin firmayi ara.`,
+      `İptal: ${opts.cancelUrl}`,
     ].join("\n"),
 
   /** Owner created this booking manually for the customer. */
@@ -78,18 +76,26 @@ export const sms = {
     businessName: string;
     date: string;
     time: string;
+    cancelUrl: string;
   }) =>
     [
-      `${stripTr(opts.businessName)} senin icin randevu olusturdu.`,
+      `${opts.businessName} senin için randevu oluşturdu.`,
       `${fmtDateSms(opts.date)} saat ${opts.time}`,
+      `İptal: ${opts.cancelUrl}`,
     ].join("\n"),
 
   /** Sent to customer 24h before the appointment. */
   reminder24h: (opts: {
     businessName: string;
+    date: string;
     time: string;
+    cancelUrl: string;
   }) =>
-    `Yarinki randevun: ${stripTr(opts.businessName)} saat ${opts.time}`,
+    [
+      `Yarınki randevun:`,
+      `${opts.businessName} saat ${opts.time}`,
+      `İptal: ${opts.cancelUrl}`,
+    ].join("\n"),
 
   /** Sent to customer when owner cancels their appointment. */
   cancelledByOwner: (opts: {
@@ -97,7 +103,7 @@ export const sms = {
     date: string;
     time: string;
   }) =>
-    `${stripTr(opts.businessName)} ${fmtDateSms(opts.date)} ${opts.time} randevunu iptal etti.`,
+    `${opts.businessName} ${fmtDateSms(opts.date)} ${opts.time} randevunu iptal etti.`,
 
   /** Sent to owner when customer cancels via the /iptal/[token] link. */
   cancelledByCustomer: (opts: {
@@ -105,7 +111,7 @@ export const sms = {
     date: string;
     time: string;
   }) =>
-    `${stripTr(opts.customerName)} ${fmtDateSms(opts.date)} ${opts.time} randevusunu iptal etti.`,
+    `${opts.customerName} ${fmtDateSms(opts.date)} ${opts.time} randevusunu iptal etti.`,
 };
 
 // ────────────────────────────────────────────────────────────

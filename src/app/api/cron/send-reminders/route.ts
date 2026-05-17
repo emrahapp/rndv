@@ -36,6 +36,7 @@ type AppointmentRow = {
   business_id: string;
   date: string;
   time: string;
+  cancel_token: string;
   customers: { ad_soyad: string; telefon: string } | null;
   businesses: { ad_soyad: string } | null;
 };
@@ -58,7 +59,7 @@ export async function GET(req: NextRequest) {
   const { data, error } = await svc
     .from("appointments")
     .select(
-      "id, business_id, date, time, customers ( ad_soyad, telefon ), businesses ( ad_soyad )",
+      "id, business_id, date, time, cancel_token, customers ( ad_soyad, telefon ), businesses ( ad_soyad )",
     )
     .eq("date", date)
     .eq("status", "confirmed")
@@ -73,6 +74,9 @@ export async function GET(req: NextRequest) {
   if (!data || data.length === 0) {
     return NextResponse.json({ sent: 0, skipped: 0, date });
   }
+
+  const appUrl =
+    process.env.NEXT_PUBLIC_APP_URL ?? "https://rndv.click";
 
   let sent = 0;
   let skipped = 0;
@@ -90,7 +94,9 @@ export async function GET(req: NextRequest) {
       tag: "reminder-24h",
       message: sms.reminder24h({
         businessName,
+        date: row.date,
         time: row.time,
+        cancelUrl: `${appUrl}/iptal/${row.cancel_token}`,
       }),
     });
 
