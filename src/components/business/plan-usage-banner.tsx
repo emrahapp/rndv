@@ -5,7 +5,7 @@ import { Link as I18nLink } from "@/i18n/navigation";
 import type { PlanStatus } from "@/lib/plan/enforce";
 import { cn } from "@/lib/utils";
 
-/** Compact "you're on Free, X/30 bookings used this month" banner, with
+/** Compact "you're on Free, X/20 bookings used this month" banner, with
  *  an Upgrade CTA. Pro plan shows SMS quota instead. */
 export async function PlanUsageBanner({ status }: { status: PlanStatus }) {
   const t = await getTranslations("app.plan");
@@ -67,8 +67,8 @@ export async function PlanUsageBanner({ status }: { status: PlanStatus }) {
 
   // Pro plan — show SMS quota
   const used = status.monthlySmsSent;
-  const included = 500;
-  const pct = Math.min(100, Math.round((used / included) * 100));
+  const included = status.smsIncludedLimit;
+  const pct = Math.min(100, Math.round((used / Math.max(1, included)) * 100));
   const totalRemaining = status.smsRemaining;
   const usingBundle = used >= included;
 

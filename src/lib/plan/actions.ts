@@ -3,7 +3,7 @@
 import { revalidatePath } from "next/cache";
 import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
-import { PRO_PRICE_KURUS, SMS_BUNDLES } from "./config";
+import { getActiveProPriceKurus, SMS_BUNDLES } from "./config";
 
 type Result<T = unknown> =
   | { ok: true; data?: T }
@@ -36,9 +36,12 @@ export async function mockPurchaseProAction(): Promise<Result> {
   if (!businessId) return { ok: false, error: "Oturum yok." };
 
   const svc = createAdminClient();
+  // Charge whatever the current effective price is — launch promo (₺99)
+  // or full (₺199). The payments row records the actual amount paid so
+  // historical data stays accurate even when the promo flag flips.
   const { error: payErr } = await svc.from("payments").insert({
     business_id: businessId,
-    amount_kurus: PRO_PRICE_KURUS,
+    amount_kurus: getActiveProPriceKurus(),
     product: "pro_subscription",
     status: "succeeded",
   });
@@ -59,7 +62,7 @@ export async function mockPurchaseProAction(): Promise<Result> {
 
 /** MOCK SMS bundle purchase. Adds credits + payment row. */
 export async function mockPurchaseBundleAction(
-  smsCount: 250 | 600 | 1500,
+  smsCount: 100 | 300 | 1000,
 ): Promise<Result> {
   const bundle = SMS_BUNDLES.find((b) => b.smsCount === smsCount);
   if (!bundle) return { ok: false, error: "Geçersiz paket." };

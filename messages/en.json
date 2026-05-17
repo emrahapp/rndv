@@ -86,49 +86,54 @@
     },
     "pricing": {
       "kicker": "Pricing",
-      "title": "Start small, scale later",
-      "subtitle": "Test everything on Free. Upgrade to Pro when you're ready.",
+      "title": "Start free. Upgrade when business grows.",
+      "subtitle": "No card, no trial timer. Test everything on Free, level up when you're ready.",
       "month": "month",
-      "disclaimer": "Pro plan doesn't auto-renew — stop anytime.",
+      "disclaimer": "Cancel anytime. No auto-renew.",
       "free": {
         "name": "Free",
         "tagline": "Start small, free forever.",
-        "perk1": "30 bookings/month",
+        "perk1": "20 bookings/month",
         "perk2": "Public booking link + QR card",
         "perk3": "Customer OTP verification",
         "cta": "Start free"
       },
       "pro": {
         "name": "Pro",
+        "launchBadge": "Launch",
         "tagline": "For professional use.",
+        "taglinePromo": "Special pricing for our first 100 members — then {fullPrice}/mo.",
         "perk1": "Unlimited bookings",
-        "perk2": "500 SMS/mo (confirm + reminder)",
+        "perk2": "50 SMS/mo included (reminder + confirm)",
         "perk3": "WhatsApp notifications",
-        "perk4": "Reports & analytics",
-        "perk5": "Buy extra SMS bundles",
-        "cta": "Get Pro"
+        "perk4": "Detailed reports & analytics",
+        "perk5": "Discounted extra SMS bundles",
+        "cta": "Go Pro"
       }
     },
-    "testimonials": {
-      "kicker": "Customers",
-      "title": "Trusted by pros",
+    "benefits": {
+      "kicker": "What you save",
+      "title": "Close the notebook, open your day",
+      "subtitle": "Stop negotiating slots over WhatsApp. You focus on the work, the system handles the rest.",
       "items": {
-        "ayse": {
-          "quote": "I used to take 20 calls a day. Now customers book themselves and the reminder SMS cut my no-shows in half.",
-          "name": "Ayse Kaya",
-          "role": "Hairdresser, Istanbul"
+        "time": {
+          "title": "Save 1–2 hours/day",
+          "description": "No more \"what times are you free?\" back-and-forth. Share the link, the customer picks an open slot."
         },
-        "mehmet": {
-          "quote": "I tried expensive dental booking software. rndv is simpler, cheaper, and my patients book by scanning a QR.",
-          "name": "Dr. Mehmet Yilmaz",
-          "role": "Dentist, Ankara"
+        "noshow": {
+          "title": "Halve no-shows",
+          "description": "Automatic 24-hour reminder SMS. A single saved no-show pays for the whole subscription."
         },
-        "selin": {
-          "quote": "Put my rndv link in Instagram bio and the QR card in a story — got 12 bookings the same day. Never had that traction before.",
-          "name": "Selin Aksoy",
-          "role": "SPA & Massage Owner"
+        "selfserve": {
+          "title": "Let customers self-serve",
+          "description": "You set the hours, customers only see open slots. No double-booking, no phone tag."
+        },
+        "insight": {
+          "title": "Know your peak days",
+          "description": "See your busiest hours, top services and loyal customers from the dashboard."
         }
-      }
+      },
+      "note": "First customer reviews coming soon — we're in launch mode, you're part of the journey."
     },
     "faq": {
       "kicker": "FAQ",
@@ -139,8 +144,8 @@
           "a": "About 2 minutes. Sign up, verify SMS, set your hours, share your link. Customers can book immediately."
         },
         "q2": {
-          "q": "Who pays for SMS?",
-          "a": "Free plan doesn't send SMS (in-app confirm). Pro includes 500 SMS/month. Beyond that, buy extra bundles (₺50 / 250 SMS)."
+          "q": "How do SMS charges work?",
+          "a": "Free plan has no reminder SMS — share WhatsApp links instead. Pro includes 50 SMS/month (reminders + confirmations). Need more? Extra bundles start at ₺49 — credits stay until used."
         },
         "q3": {
           "q": "Do customers need to sign up?",
@@ -260,22 +265,23 @@
         "bookingsThisMonth": "Bookings this month",
         "smsThisMonth": "SMS sent this month",
         "bundleCredits": "Bonus credits: {count} SMS",
-        "upgradeCta": "Upgrade to Pro · ₺499/mo",
+        "upgradeCta": "Upgrade to Pro",
         "downgradeCta": "Back to Free",
         "perks": {
           "unlimitedBookings": "Unlimited bookings",
-          "smsIncluded": "500 SMS/mo included",
+          "smsIncluded": "50 SMS/mo included",
           "whatsapp": "WhatsApp notifications",
           "reports": "Reports & analytics"
         },
         "bundles": {
-          "title": "SMS Bundles",
-          "subtitle": "Top up extra SMS after your monthly 500.",
+          "title": "Extra SMS bundle",
+          "subtitle": "Top up extra SMS when your monthly 50 runs out — credits stay until used.",
           "hint": "Bundle credits don't expire monthly — they stay until used."
         },
         "proCheckout": {
           "title": "Pro Subscription",
-          "description": "Unlimited bookings + 500 SMS + WhatsApp + reports.",
+          "description": "Unlimited bookings + 50 SMS + WhatsApp + reports.",
+          "descriptionPromo": "Launch pricing — then {fullPrice}/mo. Unlimited bookings + 50 SMS + WhatsApp + reports.",
           "suffix": "/mo"
         },
         "bundleCheckout": {

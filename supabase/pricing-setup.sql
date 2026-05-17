@@ -63,9 +63,9 @@ alter table public.payments
   add constraint payments_product_check
   check (product in (
     'pro_subscription',
-    'sms_bundle_250',
-    'sms_bundle_600',
-    'sms_bundle_1500'
+    'sms_bundle_100',
+    'sms_bundle_300',
+    'sms_bundle_1000'
   ));
 
 alter table public.payments

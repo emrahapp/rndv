@@ -23,6 +23,12 @@ import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/brand/logo";
 import { Link as I18nLink } from "@/i18n/navigation";
 import { LanguageSwitcher } from "@/components/i18n/language-switcher";
+import {
+  formatKurus,
+  getActiveProPriceKurus,
+  isLaunchPromoActive,
+  PRO_PRICE_KURUS,
+} from "@/lib/plan/config";
 import { cn } from "@/lib/utils";
 
 export default async function HomePage({
@@ -32,6 +38,9 @@ export default async function HomePage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const proPriceLabel = formatKurus(getActiveProPriceKurus());
+  const proFullPriceLabel = formatKurus(PRO_PRICE_KURUS);
+  const promoActive = isLaunchPromoActive();
 
   const t = await getTranslations("landing");
   const tNav = await getTranslations("nav");
@@ -280,20 +289,34 @@ export default async function HomePage({
             </Button>
           </div>
           {/* Pro */}
-          <div className="space-y-5 rounded-2xl border-2 border-primary bg-card p-6 sm:p-8">
+          <div className="relative space-y-5 rounded-2xl border-2 border-primary bg-card p-6 sm:p-8">
+            {promoActive && (
+              <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-primary px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-primary-foreground shadow-sm">
+                {t("pricing.pro.launchBadge")}
+              </span>
+            )}
             <div>
               <span className="inline-flex items-center gap-1 rounded-full bg-primary/15 px-2.5 py-1 text-xs font-semibold text-primary">
                 <Crown className="size-3" />
                 {t("pricing.pro.name")}
               </span>
-              <div className="mt-4">
-                <span className="text-4xl font-semibold">₺499</span>
-                <span className="ml-1 text-sm text-muted-foreground">
+              <div className="mt-4 flex items-baseline gap-2">
+                <span className="text-4xl font-semibold">{proPriceLabel}</span>
+                <span className="text-sm text-muted-foreground">
                   /{t("pricing.month")}
                 </span>
+                {promoActive && (
+                  <span className="text-sm text-muted-foreground line-through">
+                    {proFullPriceLabel}
+                  </span>
+                )}
               </div>
               <p className="mt-2 text-sm text-muted-foreground">
-                {t("pricing.pro.tagline")}
+                {promoActive
+                  ? t("pricing.pro.taglinePromo", {
+                      fullPrice: proFullPriceLabel,
+                    })
+                  : t("pricing.pro.tagline")}
               </p>
             </div>
             <ul className="space-y-2 text-sm">
@@ -313,50 +336,63 @@ export default async function HomePage({
         </p>
       </section>
 
-      {/* ─────────── Testimonials ─────────── */}
+      {/* ─────────── Benefits — "ne kazanırsın" ─────────── */}
       <section className="mx-auto max-w-6xl px-4 py-20 sm:py-28">
         <div className="mx-auto max-w-2xl text-center">
           <span className="text-xs font-semibold uppercase tracking-widest text-primary">
-            {t("testimonials.kicker")}
+            {t("benefits.kicker")}
           </span>
           <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">
-            {t("testimonials.title")}
+            {t("benefits.title")}
           </h2>
+          <p className="mt-3 text-base text-muted-foreground">
+            {t("benefits.subtitle")}
+          </p>
         </div>
-        <div className="mt-12 grid gap-4 sm:grid-cols-3">
+        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {[
-            { key: "ayse", initial: "A", color: "bg-primary text-primary-foreground" },
-            { key: "mehmet", initial: "M", color: "bg-blue-500 text-white" },
-            { key: "selin", initial: "S", color: "bg-pink-500 text-white" },
-          ].map(({ key, initial, color }) => (
-            <figure
-              key={key}
-              className="flex flex-col gap-4 rounded-2xl border border-border bg-card p-6"
+            {
+              key: "time",
+              icon: <Clock className="size-5" />,
+              title: t("benefits.items.time.title"),
+              desc: t("benefits.items.time.description"),
+            },
+            {
+              key: "noshow",
+              icon: <Calendar className="size-5" />,
+              title: t("benefits.items.noshow.title"),
+              desc: t("benefits.items.noshow.description"),
+            },
+            {
+              key: "selfserve",
+              icon: <Sparkles className="size-5" />,
+              title: t("benefits.items.selfserve.title"),
+              desc: t("benefits.items.selfserve.description"),
+            },
+            {
+              key: "insight",
+              icon: <BarChart3 className="size-5" />,
+              title: t("benefits.items.insight.title"),
+              desc: t("benefits.items.insight.description"),
+            },
+          ].map((b) => (
+            <div
+              key={b.key}
+              className="flex flex-col gap-3 rounded-2xl border border-border bg-card p-6"
             >
-              <blockquote className="flex-1 text-sm leading-relaxed text-foreground">
-                “{t(`testimonials.items.${key}.quote`)}”
-              </blockquote>
-              <figcaption className="flex items-center gap-3">
-                <div
-                  className={cn(
-                    "grid size-10 place-items-center rounded-full font-semibold",
-                    color,
-                  )}
-                >
-                  {initial}
-                </div>
-                <div>
-                  <div className="text-sm font-semibold">
-                    {t(`testimonials.items.${key}.name`)}
-                  </div>
-                  <div className="text-xs text-muted-foreground">
-                    {t(`testimonials.items.${key}.role`)}
-                  </div>
-                </div>
-              </figcaption>
-            </figure>
+              <div className="grid size-10 place-items-center rounded-full bg-primary/15 text-primary">
+                {b.icon}
+              </div>
+              <div className="text-base font-semibold">{b.title}</div>
+              <p className="text-sm leading-relaxed text-muted-foreground">
+                {b.desc}
+              </p>
+            </div>
           ))}
         </div>
+        <p className="mx-auto mt-10 max-w-2xl text-center text-sm text-muted-foreground">
+          {t("benefits.note")}
+        </p>
       </section>
 
       {/* ─────────── FAQ ─────────── */}

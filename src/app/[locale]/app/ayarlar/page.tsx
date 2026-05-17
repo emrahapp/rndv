@@ -3,6 +3,12 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { getSession } from "@/lib/auth/session";
 import { getBusiness } from "@/lib/business/storage";
 import { getPlanStatus } from "@/lib/plan/enforce";
+import {
+  formatKurus,
+  getActiveProPriceKurus,
+  isLaunchPromoActive,
+  PRO_PRICE_KURUS,
+} from "@/lib/plan/config";
 import { ProfileForm } from "./profile-form";
 import { SlugForm } from "./slug-form";
 import { HoursForm } from "./hours-form";
@@ -66,7 +72,12 @@ export default async function SettingsPage({
             {t("subscription.subtitle")}
           </p>
         </div>
-        <SubscriptionSection status={planStatus} />
+        <SubscriptionSection
+          status={planStatus}
+          proPriceLabel={formatKurus(getActiveProPriceKurus())}
+          proFullPriceLabel={formatKurus(PRO_PRICE_KURUS)}
+          launchPromoActive={isLaunchPromoActive()}
+        />
       </section>
     </div>
   );

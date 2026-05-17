@@ -21,9 +21,9 @@ type Props = {
   /** What's being bought — Pro subscription, SMS bundle, etc. */
   title: string;
   description: string;
-  /** Amount string with currency, e.g. "₺499" or "₺50". */
+  /** Amount string with currency, e.g. "₺199" or "₺49". */
   amount: string;
-  amountSuffix?: string; // " /ay" or " · 250 SMS"
+  amountSuffix?: string; // " /ay" or " · 100 SMS"
   /** Async server action; resolves with {ok}. */
   onConfirm: () => Promise<{ ok: boolean; error?: string }>;
   /** Called after successful purchase finishes. */

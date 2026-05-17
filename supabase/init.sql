@@ -126,7 +126,7 @@ create table public.payments (
   business_id        uuid not null references public.businesses(id) on delete cascade,
   amount_kurus       int not null,
   product            text not null check (product in (
-    'pro_subscription','sms_bundle_250','sms_bundle_600','sms_bundle_1500'
+    'pro_subscription','sms_bundle_100','sms_bundle_300','sms_bundle_1000'
   )),
   status             text not null default 'pending' check (status in (
     'pending','succeeded','failed','cancelled'

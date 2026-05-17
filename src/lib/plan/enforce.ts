@@ -16,6 +16,7 @@ export type PlanStatus = {
   // computed
   bookingLimit: number;        // Infinity for pro
   bookingsRemaining: number;   // Infinity for pro
+  smsIncludedLimit: number;    // included-in-plan monthly SMS (50 for pro)
   smsRemaining: number;        // included monthly + extra bundles
 
   // gates
@@ -85,6 +86,7 @@ export async function getPlanStatus(businessId: string): Promise<PlanStatus> {
     monthlySmsSent,
     bookingLimit,
     bookingsRemaining,
+    smsIncludedLimit: limits.smsIncluded,
     smsRemaining,
     canAcceptBooking: monthlyBookings < bookingLimit,
     canSendBusinessSms: smsRemaining > 0,

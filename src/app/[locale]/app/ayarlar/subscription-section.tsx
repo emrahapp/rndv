@@ -22,14 +22,24 @@ import type { PlanStatus } from "@/lib/plan/enforce";
 import { cn } from "@/lib/utils";
 
 const BUNDLES = [
-  { count: 250, name: "Mini", price: "₺50" },
-  { count: 600, name: "Standart", price: "₺100" },
-  { count: 1500, name: "Pro", price: "₺200" },
+  { count: 100, name: "Mini", price: "₺49" },
+  { count: 300, name: "Standart", price: "₺119" },
+  { count: 1000, name: "Yoğun", price: "₺299" },
 ] as const;
 
 type BundleCount = (typeof BUNDLES)[number]["count"];
 
-export function SubscriptionSection({ status }: { status: PlanStatus }) {
+export function SubscriptionSection({
+  status,
+  proPriceLabel,
+  proFullPriceLabel,
+  launchPromoActive,
+}: {
+  status: PlanStatus;
+  proPriceLabel: string; // "₺99" while launch promo, else "₺199"
+  proFullPriceLabel: string; // always "₺199" — shown crossed out during promo
+  launchPromoActive: boolean;
+}) {
   const t = useTranslations("app.settings.subscription");
   const router = useRouter();
   const [pending, startTransition] = useTransition();
@@ -118,14 +128,14 @@ export function SubscriptionSection({ status }: { status: PlanStatus }) {
             <div className="flex items-baseline justify-between">
               <span className="text-sm font-medium">{t("smsThisMonth")}</span>
               <span className="text-sm font-semibold tabular-nums">
-                {status.monthlySmsSent} / 500
+                {status.monthlySmsSent} / {status.smsIncludedLimit}
               </span>
             </div>
             <div className="relative h-2 overflow-hidden rounded-full bg-muted">
               <div
                 className="h-full bg-primary transition-all"
                 style={{
-                  width: `${Math.min(100, (status.monthlySmsSent / 500) * 100)}%`,
+                  width: `${Math.min(100, (status.monthlySmsSent / Math.max(1, status.smsIncludedLimit)) * 100)}%`,
                 }}
               />
             </div>
@@ -137,26 +147,47 @@ export function SubscriptionSection({ status }: { status: PlanStatus }) {
           </div>
         )}
 
-        {/* Pro features (only on Free) */}
+        {/* Pro features + price (only on Free) */}
         {!isPro && (
-          <ul className="mt-5 space-y-2 text-sm">
-            <Feature
-              icon={<Calendar className="size-4" />}
-              label={t("perks.unlimitedBookings")}
-            />
-            <Feature
-              icon={<MessageSquare className="size-4" />}
-              label={t("perks.smsIncluded")}
-            />
-            <Feature
-              icon={<Sparkles className="size-4" />}
-              label={t("perks.whatsapp")}
-            />
-            <Feature
-              icon={<BarChart3 className="size-4" />}
-              label={t("perks.reports")}
-            />
-          </ul>
+          <>
+            <div className="mt-5 flex items-baseline gap-2">
+              <span className="text-3xl font-semibold">{proPriceLabel}</span>
+              <span className="text-sm text-muted-foreground">/ay</span>
+              {launchPromoActive && (
+                <>
+                  <span className="text-sm text-muted-foreground line-through">
+                    {proFullPriceLabel}
+                  </span>
+                  <span className="rounded-full bg-primary/15 px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-primary">
+                    Lansman
+                  </span>
+                </>
+              )}
+            </div>
+            {launchPromoActive && (
+              <p className="mt-1 text-xs text-muted-foreground">
+                İlk 100 üyemize ilk 12 ay özel — sonra {proFullPriceLabel}/ay.
+              </p>
+            )}
+            <ul className="mt-5 space-y-2 text-sm">
+              <Feature
+                icon={<Calendar className="size-4" />}
+                label={t("perks.unlimitedBookings")}
+              />
+              <Feature
+                icon={<MessageSquare className="size-4" />}
+                label={t("perks.smsIncluded")}
+              />
+              <Feature
+                icon={<Sparkles className="size-4" />}
+                label={t("perks.whatsapp")}
+              />
+              <Feature
+                icon={<BarChart3 className="size-4" />}
+                label={t("perks.reports")}
+              />
+            </ul>
+          </>
         )}
 
         {/* CTA */}
@@ -226,8 +257,12 @@ export function SubscriptionSection({ status }: { status: PlanStatus }) {
         open={proCheckoutOpen}
         onOpenChange={setProCheckoutOpen}
         title={t("proCheckout.title")}
-        description={t("proCheckout.description")}
-        amount="₺499"
+        description={
+          launchPromoActive
+            ? t("proCheckout.descriptionPromo", { fullPrice: proFullPriceLabel })
+            : t("proCheckout.description")
+        }
+        amount={proPriceLabel}
         amountSuffix={t("proCheckout.suffix")}
         onConfirm={mockPurchaseProAction}
         onSuccess={() => router.refresh()}

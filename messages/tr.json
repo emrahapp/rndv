@@ -86,49 +86,54 @@
     },
     "pricing": {
       "kicker": "Fiyat",
-      "title": "Önce dene, sonra büyüt",
-      "subtitle": "Free planda her şeyi test et. Hazır olunca Pro'ya geç.",
+      "title": "Ücretsiz başla. İşin büyüyünce Pro'ya geç.",
+      "subtitle": "Ne kart, ne deneme süresi. Free planda her şeyi test et, hazır olunca yükselt.",
       "month": "ay",
-      "disclaimer": "Pro planda otomatik yenileme yok — istediğin zaman durdurabilirsin.",
+      "disclaimer": "İstediğin zaman iptal edebilirsin. Otomatik yenileme yok.",
       "free": {
         "name": "Free",
         "tagline": "Küçük başla, ücretsiz.",
-        "perk1": "Ayda 30 randevu",
+        "perk1": "Ayda 20 randevu",
         "perk2": "Public booking link + QR kart",
         "perk3": "Müşteri OTP doğrulaması",
         "cta": "Ücretsiz başla"
       },
       "pro": {
         "name": "Pro",
+        "launchBadge": "Lansman",
         "tagline": "Profesyonel kullanım için.",
+        "taglinePromo": "İlk 100 üyemize 12 ay özel — sonra {fullPrice}/ay.",
         "perk1": "Sınırsız randevu",
-        "perk2": "Aylık 500 SMS dahil (onay + hatırlatma)",
+        "perk2": "Aylık 50 SMS dahil (hatırlatma + onay)",
         "perk3": "WhatsApp bildirimleri",
-        "perk4": "Raporlar ve analiz",
-        "perk5": "Ek SMS paketi satın al",
-        "cta": "Pro'yu seç"
+        "perk4": "Detaylı raporlar & analiz",
+        "perk5": "İndirimli ek SMS paketleri",
+        "cta": "Pro'ya geç"
       }
     },
-    "testimonials": {
-      "kicker": "Müşterilerimiz",
-      "title": "Profesyonellerin tercihi",
+    "benefits": {
+      "kicker": "Ne kazanırsın",
+      "title": "Defteri kapat, hayatın açılsın",
+      "subtitle": "WhatsApp'ta randevu saati pazarlığı bitsin. Sen işine bak, sistem arkanı topla.",
       "items": {
-        "ayse": {
-          "quote": "Eskiden günlük 20 telefon trafiği vardı, şimdi müşteriler kendi randevularını alıyor. Hatırlatma SMS'leri sayesinde gelmezler azaldı.",
-          "name": "Ayşe Kaya",
-          "role": "Kuaför, Beyoğlu"
+        "time": {
+          "title": "Günde 1-2 saat kazan",
+          "description": "Müşteri \"hangi saat müsaitsiniz\" yazışmaları bitti. Linki paylaş, müsait saati kendi seçsin."
         },
-        "mehmet": {
-          "quote": "Diş hekimliği randevu yönetimi için pahalı yazılımlar denedim. rndv hem daha sade hem fiyatı uygun. Hastalarım QR ile randevu alıyor.",
-          "name": "Dr. Mehmet Yılmaz",
-          "role": "Diş Hekimi, Ankara"
+        "noshow": {
+          "title": "Gelmeyen randevuyu yarıya indir",
+          "description": "24 saat önce otomatik hatırlatma SMS'i gider. Tek bir gelmeyen müşteri abonelik bedelini çıkarır."
         },
-        "selin": {
-          "quote": "Instagram bio'mda rndv linkim var. Story'ye QR kartı koyduğum gün 12 randevu aldım. Daha önce bu kadar müşteri çekememiştim.",
-          "name": "Selin Aksoy",
-          "role": "SPA & Masaj Sahibi"
+        "selfserve": {
+          "title": "Müşteri kendine hizmet etsin",
+          "description": "Çalıştığın saatleri sen belirle. Müşteri sadece dolu olmayan saatleri görür, çakışma olmaz."
+        },
+        "insight": {
+          "title": "Hangi gün, hangi hizmet?",
+          "description": "Yoğun saatlerini, kazançlı hizmetlerini ve sadık müşterilerini panelden net gör."
         }
-      }
+      },
+      "note": "İlk kullanıcı yorumlarımız yakında — lansman sürümündeyiz, sen de yolculuğun bir parçası ol."
     },
     "faq": {
       "kicker": "Sıkça sorulanlar",
@@ -139,8 +144,8 @@
           "a": "Ortalama 2 dakika. Kayıt ol, SMS ile doğrula, çalışma saatlerini seç, linkini paylaş. Müşterilerin hemen randevu almaya başlayabilir."
         },
         "q2": {
-          "q": "SMS ücretleri kime ait?",
-          "a": "Free planda SMS gönderilmez (in-app onay). Pro planda aylık 500 SMS dahildir. 500'ün üstüne çıkarsan ek SMS paketi (₺50 / 250 SMS) satın alabilirsin."
+          "q": "SMS ücretleri nasıl?",
+          "a": "Free planda hatırlatma SMS'i yok — müşterilere WhatsApp link gönderirsin. Pro planda aylık 50 SMS dahildir (hatırlatma + onay). Bittiyse ₺49'dan başlayan ek paketler var — ödediğin kadar SMS, abonelik üstüne saklı kalır."
         },
         "q3": {
           "q": "Müşterilerim üye olmak zorunda mı?",
@@ -260,22 +265,23 @@
         "bookingsThisMonth": "Bu ayki randevu",
         "smsThisMonth": "Bu ay gönderilen SMS",
         "bundleCredits": "Bonus kredi: {count} SMS",
-        "upgradeCta": "Pro'ya geç · ₺499/ay",
+        "upgradeCta": "Pro'ya geç",
         "downgradeCta": "Free'ye dön",
         "perks": {
           "unlimitedBookings": "Sınırsız randevu",
-          "smsIncluded": "Aylık 500 SMS dahil",
+          "smsIncluded": "Aylık 50 SMS dahil",
           "whatsapp": "WhatsApp bildirimleri",
           "reports": "Raporlar ve analiz"
         },
         "bundles": {
-          "title": "SMS Bundle",
-          "subtitle": "Aylık 500 hakkın dolarsa ek SMS satın al.",
-          "hint": "Bundle kredileri ay sonunda sıfırlanmaz, kullanılana kadar durur."
+          "title": "Ek SMS paketi",
+          "subtitle": "Aylık 50 SMS hakkın dolarsa ek paket al — bitene kadar saklı kalır.",
+          "hint": "Paket kredileri ay sonunda sıfırlanmaz, kullanılana kadar durur."
         },
         "proCheckout": {
           "title": "Pro Aboneliği",
-          "description": "Sınırsız randevu + 500 SMS + WhatsApp + raporlar.",
+          "description": "Sınırsız randevu + 50 SMS + WhatsApp + raporlar.",
+          "descriptionPromo": "Lansman fiyatı — sonra {fullPrice}/ay olur. Sınırsız randevu + 50 SMS + WhatsApp + raporlar.",
           "suffix": "/ay"
         },
         "bundleCheckout": {
