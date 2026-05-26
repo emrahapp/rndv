@@ -105,7 +105,7 @@ export function LinkAssets({
               variant="primary"
               onClick={() =>
                 startTransition(() =>
-                  downloadPng(qrLargeSvg, `bossaat-${slug}-qr`, 1024, 1024),
+                  downloadPng(qrLargeSvg, `rndv-${slug}-qr`, 1024, 1024),
                 )
               }
               disabled={pending}
@@ -116,7 +116,7 @@ export function LinkAssets({
             <Button
               type="button"
               variant="outline"
-              onClick={() => downloadSvg(qrLargeSvg, `bossaat-${slug}-qr`)}
+              onClick={() => downloadSvg(qrLargeSvg, `rndv-${slug}-qr`)}
             >
               <Download className="size-4" />
               {t("qrSection.downloadSvg")}
@@ -150,7 +150,7 @@ export function LinkAssets({
               variant="primary"
               onClick={() =>
                 startTransition(() =>
-                  downloadPng(storyCardSvg, `bossaat-${slug}-story`, 1080, 1920),
+                  downloadPng(storyCardSvg, `rndv-${slug}-story`, 1080, 1920),
                 )
               }
               disabled={pending}
@@ -161,7 +161,7 @@ export function LinkAssets({
             <Button
               type="button"
               variant="outline"
-              onClick={() => downloadSvg(storyCardSvg, `bossaat-${slug}-story`)}
+              onClick={() => downloadSvg(storyCardSvg, `rndv-${slug}-story`)}
             >
               <Download className="size-4" />
               {t("storySection.downloadSvg")}

@@ -1,5 +1,5 @@
 -- =====================================================================
--- Bossaat  —  Storage bucket setup for user-uploaded avatars
+-- rndv.click  —  Storage bucket setup for user-uploaded avatars
 -- Run after schema.sql.
 -- =====================================================================
 

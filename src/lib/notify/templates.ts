@@ -52,11 +52,11 @@ export function toE164(phone: string): string {
 export const sms = {
   /** Owner phone verification on signup. Platform-paid. */
   signupOtp: (otp: string) =>
-    `Bossaat doğrulama kodun: ${otp}\n\nKod 10 dakika geçerli, kimseyle paylaşma.`,
+    `rndv doğrulama kodun: ${otp}\n\nKod 10 dakika geçerli, kimseyle paylaşma.`,
 
   /** Customer phone verification on /u/[slug]. Platform-paid. */
   bookingOtp: (businessName: string, otp: string) =>
-    `${businessName} · Bossaat\n\nRandevu kodun: ${otp}\nKod 10 dakika geçerli.`,
+    `${businessName} - rndv\n\nRandevu kodun: ${otp}\nKod 10 dakika geçerli.`,
 
   /** Customer received this after their OTP-verified booking succeeded. */
   bookingConfirmed: (opts: {

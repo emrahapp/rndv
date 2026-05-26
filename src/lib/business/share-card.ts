@@ -35,7 +35,7 @@ export async function buildShareCardSvg(opts: {
   businessName: string;
   publicUrl: string;
   bookingLabel: string; // "Online randevu" / "Book online"
-  footerLabel: string; // "Bossaat ile çalışıyor" / "powered by Bossaat"
+  footerLabel: string; // "rndv ile çalışıyor" / "powered by rndv"
 }): Promise<string> {
   const qrFull = await QRCode.toString(opts.publicUrl, {
     type: "svg",
@@ -57,10 +57,10 @@ export async function buildShareCardSvg(opts: {
 <svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
   <rect width="1080" height="1920" fill="${BG}"/>
 
-  <!-- Bossaat brand badge -->
+  <!-- rndv brand badge -->
   <g transform="translate(540, 220)">
-    <rect x="-120" y="-32" width="240" height="64" rx="32" fill="${ACCENT}"/>
-    <text x="0" y="8" text-anchor="middle" font-size="32" font-weight="600" fill="${FG}">bossaat</text>
+    <rect x="-86" y="-32" width="172" height="64" rx="32" fill="${ACCENT}"/>
+    <text x="0" y="8" text-anchor="middle" font-size="32" font-weight="600" fill="${FG}">rndv</text>
   </g>
 
   <!-- Subtitle -->

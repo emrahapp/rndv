@@ -34,8 +34,8 @@ export function Logo({
           className="font-semibold tracking-tight text-foreground"
           style={{ fontSize: size * 0.78 }}
         >
-          bossaat
-          <span className="font-medium text-foreground/35">.com</span>
+          rndv
+          <span className="font-medium text-foreground/35">.click</span>
         </span>
       )}
     </div>

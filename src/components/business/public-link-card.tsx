@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 export function PublicLinkCard({ url }: { url: string }) {
   const t = useTranslations("app.dashboard.publicLink");
   const [copied, setCopied] = useState(false);
-  // strip protocol for a cleaner display: "bossaat.com/u/xyz"
+  // strip protocol for a cleaner display: "rndv.click/u/xyz"
   const display = url.replace(/^https?:\/\//, "");
 
   async function onCopy() {

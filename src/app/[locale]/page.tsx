@@ -490,7 +490,7 @@ export default async function HomePage({
         </div>
         <div className="border-t border-border">
           <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 text-xs text-muted-foreground">
-            <span>© {new Date().getFullYear()} Bossaat</span>
+            <span>© {new Date().getFullYear()} rndv</span>
             <span>{t("footer.rights")}</span>
           </div>
         </div>

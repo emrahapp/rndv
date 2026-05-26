@@ -1,5 +1,5 @@
 /**
- * Render the Bossaat logo (green circle + black checkmark, link.com style)
+ * Render the rndv logo (green circle + black checkmark, link.com style)
  * to a transparent-background PNG at multiple sizes.
  *
  * Run with: node scripts/render-logo.mjs
@@ -41,7 +41,7 @@ const SIZES = [256, 512, 1024];
 
 for (const size of SIZES) {
   const svg = buildSvg(size);
-  const outPath = join(outDir, `bossaat-logo-${size}.png`);
+  const outPath = join(outDir, `rndv-logo-${size}.png`);
   await sharp(Buffer.from(svg))
     .png({ compressionLevel: 9 })
     .toFile(outPath);
@@ -49,5 +49,5 @@ for (const size of SIZES) {
 }
 
 // Also drop the master SVG for designers who want to scale infinitely.
-writeFileSync(join(outDir, "bossaat-logo.svg"), buildSvg(512));
-console.log(`✓ wrote ${join(outDir, "bossaat-logo.svg")}`);
+writeFileSync(join(outDir, "rndv-logo.svg"), buildSvg(512));
+console.log(`✓ wrote ${join(outDir, "rndv-logo.svg")}`);

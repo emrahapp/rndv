@@ -1,6 +1,6 @@
 {
   "common": {
-    "appName": "Bossaat",
+    "appName": "rndv",
     "tagline": "Randevu defterin, cebinde.",
     "back": "Geri",
     "save": "Kaydet",
@@ -16,7 +16,7 @@
     "signup": "Üye ol"
   },
   "landing": {
-    "badge": "Yeni · bossaat.com",
+    "badge": "Yeni · rndv.click",
     "title": "Randevu defterin cebinde",
     "description": "Müşterilerine tek link gönder. Saniyeler içinde randevu alsınlar — kayıt yok, SMS ile doğrulansın, randevu hazır.",
     "ctaPrimary": "Ücretsiz başla",
@@ -29,7 +29,7 @@
       "business": "Ayşe Kuaför",
       "service": "30 dk randevu",
       "time": "Yarın · 14:30",
-      "cta": "Bossaat ile al"
+      "cta": "rndv ile al"
     },
     "features": {
       "kicker": "Neler var",
@@ -74,7 +74,7 @@
     "sectors": {
       "kicker": "Herkes için",
       "title": "Hangi sektörde olursan ol",
-      "subtitle": "Randevu ile çalışan her işletme Bossaat'ı kullanabilir.",
+      "subtitle": "Randevu ile çalışan her işletme rndv'yi kullanabilir.",
       "items": {
         "barber": "Kuaför / Berber",
         "beauty": "Güzellik salonu",
