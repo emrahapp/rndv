@@ -13,7 +13,7 @@ export function SlugForm({
   slugBase,
 }: {
   initialSlug: string;
-  slugBase: string; // e.g. "rndv.click/u/" or "localhost:3000/u/"
+  slugBase: string; // e.g. "bossaat.com/u/" or "localhost:3000/u/"
 }) {
   const t = useTranslations("app.settings.slug");
   const tCommon = useTranslations("common");

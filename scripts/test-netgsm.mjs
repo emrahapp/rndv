@@ -85,7 +85,7 @@ if (process.argv.includes("--send-test")) {
       iysfilter: "0",
       messages: [
         {
-          msg: "rndv test SMS — Netgsm entegrasyonu çalışıyor. ğüşçöı ✓",
+          msg: "Bossaat test SMS — Netgsm entegrasyonu çalışıyor. ğüşçöı ✓",
           no: gsmno,
         },
       ],

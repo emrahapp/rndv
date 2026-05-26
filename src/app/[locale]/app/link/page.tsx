@@ -31,7 +31,7 @@ export default async function LinkPage({
     businessName: business.ad_soyad,
     publicUrl,
     bookingLabel: locale === "tr" ? "Online randevu" : "Online booking",
-    footerLabel: locale === "tr" ? "rndv ile çalışıyor" : "powered by rndv",
+    footerLabel: locale === "tr" ? "Bossaat ile çalışıyor" : "powered by Bossaat",
   });
 
   return (

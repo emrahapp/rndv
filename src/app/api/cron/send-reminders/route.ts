@@ -76,7 +76,7 @@ export async function GET(req: NextRequest) {
   }
 
   const appUrl =
-    process.env.NEXT_PUBLIC_APP_URL ?? "https://rndv.click";
+    process.env.NEXT_PUBLIC_APP_URL ?? "https://bossaat.com";
 
   let sent = 0;
   let skipped = 0;

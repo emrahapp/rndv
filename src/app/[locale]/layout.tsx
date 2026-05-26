@@ -10,7 +10,7 @@ import { Toaster } from "@/components/ui/toaster";
 import "../globals.css";
 
 export const metadata: Metadata = {
-  title: "rndv — randevu defterin cebinde",
+  title: "Bossaat — randevu defterin cebinde",
   description:
     "Müşterilerine tek link gönder. Saniyeler içinde randevu alsınlar — kayıt yok, SMS ile doğrulansın, randevu hazır.",
   metadataBase: new URL(

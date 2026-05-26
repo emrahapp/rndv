@@ -1,6 +1,6 @@
 {
   "common": {
-    "appName": "rndv",
+    "appName": "Bossaat",
     "tagline": "Your booking page, in your pocket.",
     "back": "Back",
     "save": "Save",
@@ -16,7 +16,7 @@
     "signup": "Sign up"
   },
   "landing": {
-    "badge": "New · rndv.click",
+    "badge": "New · bossaat.com",
     "title": "Bookings made simple",
     "description": "Send one link to your customers. They book in seconds — no signup, SMS verified, done.",
     "ctaPrimary": "Get started free",
@@ -29,7 +29,7 @@
       "business": "Ayse Salon",
       "service": "30 min appointment",
       "time": "Tomorrow · 2:30 PM",
-      "cta": "Book with rndv"
+      "cta": "Book with Bossaat"
     },
     "features": {
       "kicker": "What's included",
@@ -74,7 +74,7 @@
     "sectors": {
       "kicker": "For everyone",
       "title": "Whatever your business",
-      "subtitle": "Any appointment-based business can use rndv.",
+      "subtitle": "Any appointment-based business can use Bossaat.",
       "items": {
         "barber": "Hairdresser / Barber",
         "beauty": "Beauty salon",

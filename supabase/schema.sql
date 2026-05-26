@@ -1,5 +1,5 @@
 -- =====================================================================
--- rndv.click  —  schema v2 (Supabase live)
+-- Bossaat  —  schema v2 (Supabase live)
 -- Re-runnable: drops the old shape first then recreates everything.
 -- =====================================================================
 

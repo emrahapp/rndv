@@ -1,5 +1,5 @@
 -- =====================================================================
--- rndv.click — full schema for a fresh Supabase project.
+-- Bossaat — full schema for a fresh Supabase project.
 -- Run this ONCE in SQL Editor. Re-runnable / idempotent.
 -- =====================================================================
 

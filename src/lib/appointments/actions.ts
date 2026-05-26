@@ -182,7 +182,7 @@ export async function verifyBookingOtpAction(
   }
 
   const appUrl =
-    process.env.NEXT_PUBLIC_APP_URL ?? "https://rndv.click";
+    process.env.NEXT_PUBLIC_APP_URL ?? "https://bossaat.com";
 
   // Customer SMS (business-paid → plan-gated)
   await sendBusinessSms({
@@ -342,7 +342,7 @@ export async function createManualAppointmentAction(
   }
 
   const appUrl =
-    process.env.NEXT_PUBLIC_APP_URL ?? "https://rndv.click";
+    process.env.NEXT_PUBLIC_APP_URL ?? "https://bossaat.com";
   await sendBusinessSms({
     businessId: business.id,
     to: telefon,

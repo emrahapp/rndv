@@ -24,7 +24,7 @@ export default async function CancelPage({
           {t("notFound")}
         </h1>
         <Button asChild variant="outline">
-          <I18nLink href="/">rndv.click</I18nLink>
+          <I18nLink href="/">bossaat.com</I18nLink>
         </Button>
       </Centered>
     );
